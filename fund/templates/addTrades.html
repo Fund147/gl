@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title >Fund Allocation System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <script type="js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery.js"></script>
+  </head>
+
+<body>
+<div class="container-fluid">
+      <!-- Header -->
+      <div class="row-fluid">
+        <h2 class="text-center" style="margin: 25px 0;">Fund Allocation System</h2>
+      <!-- Split line -->
+      <div class="row-fluid">
+        <div style="height:1px; background:#ccc; margin: 0 15px;"></div>
+      </div><br />   
+
+
+      <form class="form-horizontal" action="/test/" method="get">
+        <div class="control-group">
+          <label class="control-label" for="fundCode">tID:</label>
+          <div class="controls">
+            <input name="tID" type="text" id="tID">
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="account">tAccount:</label>
+          <div class="controls">
+            <input name="tAccount" type="text" id="tAccount">
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="authorizeNum">consignmentNo:</label>
+          <div class="controls">
+            <input name="consignmentNo" type="text" id="consignmentNo">
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="dealedNum">transactionNo:</label>
+          <div class="controls">
+            <input name="transactionNo" type="text" id="transactionNo">
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="dealedAmount">transationAmount:</label>
+          <div class="controls">
+            <input name="transationAmount" type="text" id="transationAmount">
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="dealedPrice">transationPrice:</label>
+          <div class="controls">
+            <input name="transationPrice" type="text" id="transationPrice">
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label class="control-label" for="startDate">tdate:</label>
+          <div class="controls">
+           <input name="tdate" type="text" id="tdate" placeholder="yyyy-mm-dd">
+          </div>
+        </div>
+
+		<div class="control-group">
+          <label class="control-label" for="dealedPrice">customerNumber:</label>
+          <div class="controls">
+            <input name="customerNumber" type="text" id="customerNumber">
+          </div>
+        </div>
+        <div class="control-group">
+          <div class="controls">
+            <button type="submit" class="btn">Add</button>
+            <button type="button" class="btn"><a href="/index/">Close</a></button>
+            <button type="reset" class="btn">Reset</button>
+          </div>
+        </div>
+      </form>
+</div>
+</div>
+</body>
+</html>

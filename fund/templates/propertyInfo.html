@@ -1,0 +1,40 @@
+﻿<html>
+<head>
+
+</head>
+<body>
+	<div>
+		<form action="" method="GET" accept-charset="utf-8">
+			<fieldset>
+				<legend><span>资产基本信息</span></legend>
+				<div>
+					<span>Fund Code:</span><input name='tID' type="text" id='tID' value={{ass.tID}}>
+				</div>
+				<div>
+					<span>Fund Name:</span><input name='aName' type="text" id='aName' value={{ass.aName}}>
+				</div>
+            	<div>
+					<span>Fund Type:</span><input name='aClass' type="text" id='aClass' value={{ass.aClass}}> 
+            	</div>
+				<div>
+					<span>Trransaction Market:</span><input name='aMarket' type="text" id='aMarket' value={{ass.aMarket}}>
+            	</div>
+				<div>
+					<span>Currency:</span><input name='currency' type="text" id='currency' value={{ass.currency}}> 
+				</div>
+				<div>
+					<span>Lot Price:</span><input name='lotSize' type="text" id='lotSize' value={{ass.lotSize}}> 
+				</div>
+				<div>
+					<span>Last Day Closing Price:</span><input name='pPrice' type="text" id='pPrice' value={{ass.pPrice}}> 
+				</div>
+				<div>
+					<span>Today Closing Price:</span><input name='tPrice' type="text" id='tPrice' value={{ass.tPrice}}> 
+				</div>
+			</fieldset>
+		</form>
+		<button><a href="/index/">close</a></button>
+	</div>
+</body>
+</html>
+

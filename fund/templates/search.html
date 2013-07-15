@@ -1,0 +1,51 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<!DOCTYPE html>
+
+<html lang="en">
+<html>
+<body>
+						<table class="table table-hover">
+							<!-- Table header -->
+							<thead>
+								<tr>
+									<a href="#">
+									<th>序号</th>
+									<th>交易员</th>
+									<th>当前状态</th>
+									<th>基金代码</th>
+									<th>交易账户</th>
+									<th>委托编号</th>
+									<th>成交编号</th>
+									<th>成交数量</th>
+									<th>成交价格</th>
+									<th>起始日期</th>
+									<th>分配客户数量</th>
+									</a>
+								</tr>
+							</thead>
+
+							<!-- Table body -->
+							<tbody>
+								
+							<form action='' method='get'>	{% for transationRecord in recs %}
+								<tr>
+									<td>{{transationRecord.id}}</td>
+									<td>{{transationRecord.tdealer}}</td>
+									<td>{{transationRecord.tState}}</td>
+									<td>{{transationRecord.tID}}</td>
+									<td>{{transationRecord.tAccount}}</td>
+									<td>{{transationRecord.consignmentNo}}</td>
+									<td>{{transationRecord.transactionNo}}</td>
+									<td>{{transationRecord.transationAmount}}</td>
+									<td>{{transationRecord.transationPrice}}</td>
+									<td>{{transationRecord.tdate}}</td>
+									<td>{{transationRecord.customerNumber}}</td>
+								</tr>
+								{% endfor %}
+							</tbody>
+
+</body>
+</html>
+
+

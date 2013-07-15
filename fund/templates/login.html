@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>Sign in</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="sign in interface">
+        <meta name="author" content="GunleoN.">
+        <!-- styles -->
+        <link rel="stylesheet" type="text/css" href="/site_media/css/bootstrap.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="/site_media/css/bootstrap-responsive.css">
+        <link rel="stylesheet" type="text/css" href="/site_media/css/myStyle.css">
+    </head>
+    <body>
+        <div class="container">
+            <form class="form-signin" action="/login/" method="post">
+			{% csrf_token %}
+                <h2 class="form-signin-heading">Please sign in</h2>
+
+                <input type="text" class="input-block-level" placeholder="User ID" name="dealerIDInput" id="dealerIDInput">
+                <input type="password" class="input-block-level" placeholder="Password" name="passwordInput" id="passwordInput">
+                <label class="checkbox">
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+                <button class="btn btn-primary btn-block" type="submit" value="login">Sign in</button>
+                <a href="register">Register</a>
+            </form>
+             
+        </div>
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="site_media/js/jquery.js"></script>
+    <script type="text/javascript" src="site_media/js/bootstrap.js"></script>
+    
+    </body>
+</html>

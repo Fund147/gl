@@ -1,0 +1,14 @@
+﻿<html>
+<body>
+	<p><strong>分配账户&分配数量</strong></p><br />
+	{% for customer in cus %}
+	{{customer.cID}} &nbsp & &nbsp {{result.allocationInformation}}
+	{% endfor %}
+	<br />
+	<br />
+		<form action="" method="get">
+		<button type="submit">Confirm</button>
+		</form>
+		<button type="button"><a href="#">close</a></button>
+</body>
+</html>

@@ -1,0 +1,142 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title >Fund Allocation System</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap -->
+		<link href="/site_media/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<link href="/site_media/css/bootstrap-responsive.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<script type="/site_media/js/bootstrap.min.js"></script>
+		<script src="http://code.jquery.com/jquery.js"></script>
+		<div class="container-fluid">
+			<!-- Header -->
+			<div class="row-fluid">
+				<h2 class="text-center" style="margin: 25px 0;">Fund Allocation System</h2>
+
+			<!-- Split line -->
+			<div class="row-fluid">
+				<div style="height:1px; background:#ccc; margin: 0 15px;"></div>
+			</div>
+
+				<!-- Modal -->
+				<div id="addTrades" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none;">
+  					<div class="modal-header">
+  						<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+  						<h3 id="mymodalLabel">Modal header</h3>
+  					</div>
+  					<div class="modal-body">
+  						<p>body</p>
+  					</div>
+  					<div class="modal-footer">
+  						<button class="btn" data-dismiss="modal" aria-hidden="true">close</button>
+  						<button class="btn btn-primary">Save</button>
+  					</div>
+  				</div>
+
+
+			<div class="row-fluid">
+				<!--Sidebar content-->
+				<div class="span2">
+					<ul class="nav nav-list nav-pills nav-stacked" style="margin: 20px 0px;"	>
+						<li class="nav-header">MENU</li>
+						<li class="divider"></li>
+						<li>
+							<!-- <a data-toggle="modal" href="#addTrades" role="button">Add trades</a> -->
+							<a href="/tradesTable">add</a>
+						</li>
+					</ul>
+				</div>
+
+
+
+
+				<!--Body content-->
+				<div class="span10">
+					<div class="recordTable">
+						<ul class="nav nav-tabs" style="margin: 20px 0px;">
+							<li class="active"><a href="#">Trading Record</a></li>
+						</ul>
+
+						<table class="table table-hover">
+							<!-- Table header -->
+							<thead>
+								<tr>
+									<a href="#">
+									<th>序号</th>
+									<th>交易员</th>
+									<th>当前状态</th>
+									<th>基金代码</th>
+									<th>交易账户</th>
+									<th>委托编号</th>
+									<th>成交编号</th>
+									<th>成交数量</th>
+									<th>成交价格</th>
+									<th>起始日期</th>
+									<th>分配客户数量</th>
+									<th>编辑</th>
+									<th>删除</th>
+									<th>分配</th>
+									<th>查看</th>
+									</a>
+								</tr>
+							</thead>
+
+							<!-- Table body -->
+							<tbody>
+							{% for transationRecord in trans %}
+								<tr>
+									<td>{{transationRecord.id}}</td>
+									<td>{{transationRecord.tdealer}}</td>
+									<td>{{transationRecord.tState}}</td>
+									<td><a href="/propertyInfo/{{transationRecord.tID}}">{{transationRecord.tID}}</td>
+									<td>{{transationRecord.tAccount}}</td>
+									<td>{{transationRecord.consignmentNo}}</td>
+									<td>{{transationRecord.transactionNo}}</td>
+									<td>{{transationRecord.transationAmount}}</td>
+									<td>{{transationRecord.transationPrice}}</td>
+									<td>{{transationRecord.tdate}}</td>
+									<td>{{transationRecord.customerNumber}}</td>
+									<td><a href="/editPage/{{transationRecord.id}}">Edit</td>
+									<td><a href="/DeletePage/{{transationRecord.id}}">Delete</td>
+									<td><a href="/AllocatePage/{{transationRecord.id}}">Allocate</td>
+									<td><a href="/CheckPage/{{transationRecord.id}}">Check</td>
+								</tr>
+								{% endfor %}
+							</tbody>
+						</table>
+					</div>
+					<!-- Check allocation record -->
+					<div class="search">
+						<ul class="nav nav-tabs" style="margin: 20px 0px;">
+							<li class="active"><a href="#">Check Allocation Record</a></li>
+						</ul>
+						<form class="form-inline form-search" action='/search'>
+							<div class="span3">
+								<label>基金代码 : <input name='tID' type="text" id='tID' class="input-small"></label>
+							</div>
+							<div class="span3">
+								<label>交易账户 : <input name='tAccount' type="text" id='tAccount' class="input-small"></label>
+							</div>
+							<div class="span3">
+								<label>起始日期 : <input name='tdate' type="text" id='tdate' class="input-small" placeholder="yyyy-mm-dd"></label>
+							</div>
+							<div class="span3">
+					   		 <button type="submit" class="btn">Search</button>
+							</div>
+						</form>
+					</div>
+
+
+				</div>
+
+			</div>
+		</div>
+
+	</body>
+</html>

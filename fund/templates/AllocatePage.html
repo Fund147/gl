@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<!-- Styles -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="screen">
+   	<link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css">
+   	<link rel="stylesheet" type="text/css" href="css/myStyle.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+
+</head>
+<body>
+	<form action="/AllocateResult/" method="get">
+	<div class="span5">
+	<p><strong>分配账户</strong></p>
+	<tbody>
+	{% for customerAccount in cus %}
+	<p>{{customerAccount.cID}}</p>
+	{% endfor %}
+	</tbody>
+	</div>
+	<div class="span7">
+
+		<p><strong>分配模型</strong></p>		
+		<select name = 'extra_condition'>
+		
+			<option value = 'Single' {% ifequal extra_condition 'Single' %} selected = 'selected' {% endifequal %}>Single</option>
+			
+			<option value = 'Waterfall' {% ifequal extra_condition 'Waterfall' %} selected = 'selected' {% endifequal %}>Waterfall</option>
+			
+			<option value = 'Pro-rata' {% ifequal extra_condition 'Pro-rata' %} selected = 'selected' {% endifequal %}>Pro-rata</option>
+			
+		</select>
+	</div>
+	<div class="span5"></div>
+	<div class="span4">
+		<br /><br /><br />	
+			<button type="submit">Confirm</button>
+	</form>
+		<button type="button"><a href="/index/">close</a></button>
+	</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<html>
+<head>
+
+</head>
+<body>
+	<div>
+		<form action="/DeleteSave/{{trans.id}}" method="GET" accept-charset="utf-8">
+			<fieldset>
+				<legend><span>删除成交记录</span></legend>
+				<div>
+					<span>Fund Code:</span><input name='tID' type="text" id='tID' value={{trans.tID}}>
+				</div>
+				<div>
+					<span>Account:</span><input name='tAccount' type="text" id='tAccount' value={{trans.tAccount}}>
+				</div>
+            	<div>
+					<span>Authorize Number:</span><input name='consignmentNo' type="text" id='consignmentNo' value={{trans.consignmentNo}}> 
+            	</div>
+				<div>
+					<span>Dealed Number:</span><input name='transactionNo' type="text" id='transactionNo' value={{trans.transactionNo}}>
+            	</div>
+				<div>
+					<span>Amount:</span><input name='transationAmount' type="text" id='transationAmount' value={{trans.transationAmount}}> 
+				</div>
+				<div>
+					<span>Price:</span><input name='transationPrice' type="text" id='transationPrice' value={{trans.transationPrice}}> 
+				</div>
+				<div>
+					<span>Start Date:</span><input name='tdate' type="text" id='tdate' placeholder="yyyy-mm-dd" value={{trans.tdate}}> 
+				</div>
+				<div>
+					<span>customerNumber:</span><input name='customerNumber' type="text" id='customerNumber' value={{trans.customerNumber}}> 
+				</div>
+            	<input type="submit" value="Delete" id="submit">
+			</fieldset>
+		</form>
+		<button><a href="/index/">close</a></button>
+	</div>
+</body>
+</html>
+
+
+

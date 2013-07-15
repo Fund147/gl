@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+
+<!DOCTYPE html>
+
+<html lang="en">
+<html>
+<body>
+	<form action="." method="get">
+		{% for transationRecord in recs %}
+		<p>Fund Code:</p>
+		<input name='tID' type="text" id='tID' value={{transationRecord.tID}}>
+		<p>Account:</p>
+		<input name='tAccount' type="text" id='tAccount' value={{transationRecord.tAccount}}>		
+		<p>Authorize number:</p>
+		<input name='consignmentNo' type="text" id='consignmentNo' value={{transationRecord.consignmentNo}}>
+		<p>Dealed Number:</p>
+		<input name='transactionNo' type="text" id='transactionNo' value={{transationRecord.transactionNo}}>
+		<p>Amount:</p>
+		<input name='transationAmount' type="text" id='transationAmount' value={{transationRecord.transationAmount}}>
+		<p>Price:</p>
+		<input name='transationPrice' type="text" id='transationPrice' value={{transationRecord.transationPrice}}>
+		<p>Start Date:</p>
+		<input name='tdate' type="text" id='tdate' value={{transationRecord.tdate}}>
+		<p>Customer Number:</p>
+		<input name='customerNumber' type="text" id='customerNumber' value={{transationRecord.customerNumber}}>
+		{% endfor %}
+		 <div class="control-group">
+          <div class="controls">
+            <button type="button" class="btn"><a href="/index/">Close</a></button>
+          </div>
+        </div>
+	</form>
+
+	
+</body>	
+</html>

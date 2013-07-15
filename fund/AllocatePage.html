@@ -1,0 +1,31 @@
+<html>
+<body>
+<h1>Allocate</h1>	
+	<form action="." method="GET">
+
+		<span id = "search_content">
+	  
+			<label for="q">Allocate: </label>
+
+			<input type="text" name="q" value="{{ query|escape }}">
+		
+		</span>
+				
+		<select name = 'extra_condition'>
+		
+			<option value = 'Single' {% ifequal extra_condition 'Single' %} selected = 'selected' {% endifequal %}>Single</option>
+			
+			<option value = 'Waterfall' {% ifequal extra_condition 'Waterfall' %} selected = 'selected' {% endifequal %}>Waterfall</option>
+			
+			<option value = 'Pro-rata' {% ifequal extra_condition 'Pro-rata' %} selected = 'selected' {% endifequal %}>Pro-rata</option>
+			
+		</select>
+		
+		<span id = "sumit_button">
+		
+			<input type="submit" value="Allocate">
+
+		</span>
+	</form>
+</body>
+</html>
