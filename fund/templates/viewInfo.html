@@ -1,0 +1,15 @@
+﻿<html>
+<head>
+
+</head>
+<body>
+	<h1><strong>查询分配结果</strong></h1><br />
+	<p><strong>成交记录编号:&nbsp</strong>{{transationRecord.tID}}</p>
+
+	<p><strong>分配模型:&nbsp&nbsp</strong></p>
+	{% for cusId in result.cID %}
+	<p>{{cusId}}</p>
+	{% endfor %}
+	<p><strong>分配数量:&nbsp&nbsp</strong>{{result.allocationInformation}}</p>
+</body>
+</html>
