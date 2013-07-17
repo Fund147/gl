@@ -16,7 +16,7 @@
         <div class="container">
             <form class="form-signin" action="/login/" method="post">
 			{% csrf_token %}
-                <h2 class="form-signin-heading">Please sign in</h2>
+                <h2 class="form-signin-heading">Dealer</h2>
 
                 <input type="text" class="input-block-level" placeholder="User ID" name="dealerIDInput" id="dealerIDInput">
                 <input type="password" class="input-block-level" placeholder="Password" name="passwordInput" id="passwordInput">
@@ -27,6 +27,18 @@
                 <a href="register">Register</a>
             </form>
              
+			 <form class="form-signin" action="/supervisorLogin/" method="post">
+			{% csrf_token %}
+                <h2 class="form-signin-heading">Supervisor</h2>
+
+                <input type="text" class="input-block-level" placeholder="User ID" name="supervisorIDInput" id="supervisordealerIDInput">
+                <input type="password" class="input-block-level" placeholder="Password" name="supervisorpasswordInput" id="supervisorpasswordInput">
+                <label class="checkbox">
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+                <button class="btn btn-primary btn-block" type="submit" value="login">Sign in</button>
+                <a href="/supervisorRegister/">Register</a>
+            </form>
         </div>
 
     <!-- Le javascript

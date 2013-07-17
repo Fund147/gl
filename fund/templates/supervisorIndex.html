@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
 
 <!DOCTYPE html>
 
@@ -46,11 +46,6 @@
 					<ul class="nav nav-list nav-pills nav-stacked" style="margin: 20px 0px;"	>
 						<li class="nav-header">MENU</li>
 						<li class="divider"></li>
-						<li>
-							<!-- <a data-toggle="modal" href="#addTrades" role="button">Add trades</a> -->
-							<a href="/tradesTable">add</a>
-							<a href="/read">add more than one</a>
-						</li>
 					</ul>
 				</div>
 
@@ -80,10 +75,8 @@
 									<th>成交价格</th>
 									<th>起始日期</th>
 									<th>分配客户数量</th>
-									<th>编辑</th>
-									<th>删除</th>
-									<th>分配</th>
 									<th>查看</th>
+									<th>审核</th>
 									</a>
 								</tr>
 							</thead>
@@ -103,10 +96,8 @@
 									<td>{{transationRecord.transationPrice}}</td>
 									<td>{{transationRecord.tdate}}</td>
 									<td>{{transationRecord.customerNumber}}</td>
-									<td><a href="/editPage/{{transationRecord.id}}">Edit</td>
-									<td><a href="/DeletePage/{{transationRecord.id}}">Delete</td>
-									<td><a href="/AllocatePage/{{transationRecord.id}}">Allocate</td>
 									<td><a href="/CheckPage/{{transationRecord.id}}">View</td>
+									<td><a href="/supervisorCheckPage/{{transationRecord.id}}">Check</td>
 								</tr>
 								{% endfor %}
 							</tbody>

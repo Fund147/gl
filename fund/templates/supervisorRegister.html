@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/style/css/register.css"  />
+</head>
+<body>
+	<div>
+		<form action="/supervisorRegist/" method="POST" accept-charset="utf-8">
+		{% csrf_token %}
+			<fieldset>
+				<legend><span>Register</span></legend>
+				<div>
+					<span>supervisorID</span><input type="text" name="sID"/>
+				</div>
+				<div>
+					<span>supervisorName</span><input type="text" name="sName"/>
+				</div>
+            	<div>
+					<span>Password</span><input type="password" name="password" /> 
+            	</div>
+				<div>
+					<span>ConfirmPassword</span><input type="password" name="ConfirmPassword"/>
+            	</div>
+				<div>
+					<span>contractInformation</span><input type="text" name="scontractInformation" /> 
+				</div>
+            	<input type="submit" value="Register" id="submit"/>
+			</fieldset>
+		</form>
+	</div>
+</body>
+</html>

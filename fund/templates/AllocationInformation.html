@@ -1,0 +1,23 @@
+<html>
+<head>
+
+</head>
+<body>
+	<p>分配账户  分配数量</p>
+	<form action="/index/" method="get">
+		{% for a in cus %}
+		<p>
+		
+		<input value={{a.cID}} disabled="disabled" />
+		<input value={{a.allocationInformation}} />
+
+		<button type=""button"><a href="/editAllocation/{{a.id}}">Edit</a></button>
+	
+		
+		</p>
+		{% endfor %}
+		<br />
+		<button>Confirm</button>
+	</form>
+</body>
+</html>

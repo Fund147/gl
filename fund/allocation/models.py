@@ -45,7 +45,8 @@ class customerAccount(models.Model):
 class checkResult(models.Model):
 	consignmentNo = models.CharField(max_length=30)
 	sName= models.CharField(max_length=30)
-	checkInformation = models.FloatField()
+	is_pass = models.CharField(max_length=30)
+	checkInformation = models.CharField(max_length=100)
 
 
 class dealer(models.Model):

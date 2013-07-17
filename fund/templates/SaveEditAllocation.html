@@ -1,17 +1,10 @@
-﻿<html>
+<html>
 <body>
-
 		<p><strong>分配账户  分配数量</strong></p><br />
-		
-		<form action="/AllocationInformation/{{Resultid_from_url}}" method="get">
-			{% for a in results %}
-			<p>{{ a.cID }} &nbsp &nbsp {{ a.allocationInformation }}</p>
-			{% endfor %}
+		<form action="" method="get">
+			<p>{{ saveedit.cID }} &nbsp &nbsp {{ saveedit.allocationInformation }}<button>edit</button></p>
 			<input type="submit" value="Confirm" id="submit">
 		</form>
-		
-
-
 	<br />
 	<br />
 		<button type="button"><a href="/index/">close</a></button>

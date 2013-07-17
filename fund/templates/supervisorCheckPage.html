@@ -1,0 +1,14 @@
+﻿<html>
+<head>
+
+</head>
+<body>
+	<h1><strong>审核页面</strong></h1>
+	<form action="/saveResult/{{trans.id}}" method="get">
+		<p>成交编号:<input type="text" id="consignmentNo" name="consignmentNo" value={{trans.consignmentNo}}></p>
+		<p>审核结果:<input type="text" id="is_pass" name="is_pass"></p>
+		<p>&nbsp&nbsp原因:&nbsp&nbsp<input type="text" id="reason" name="reason"></p>
+		<button>Confirm</button>
+	</form>
+</body>
+</html>
